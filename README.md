@@ -125,3 +125,12 @@ GitHub Actions	    CI/CD automation
 Amazon ECR	    Container image registry
 Amazon ECS Fargate  Container deployment
 Terraform	    Infrastructure as Code
+
+## Deployment Verification
+
+- CI/CD pipeline: GitHub Actions
+- Container registry: Amazon ECR
+- Deployment platform: Amazon ECS Fargate
+- Authentication: GitHub OIDC with AWS IAM
+- Application response: Hello from CI/CD Pipeline!
+- Deployment trigger: Push to the main branch

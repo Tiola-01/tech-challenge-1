@@ -25,9 +25,8 @@ jobs:
       # 1. Checkout the GitHub repository
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Diagnose GitHub OIDC context
-      - name: Inspect OIDC claims
-        uses: github/actions-oidc-debugger@v1
         env:
           REPOSITORY: ${{ github.repository }}
           REF: ${{ github.ref }}
@@ -36,6 +35,9 @@ jobs:
           echo "Repository: $REPOSITORY"
           echo "Ref: $REF"
           echo "Event: $EVENT_NAME"
+
+      - name: Inspect OIDC claims
+        uses: github/actions-oidc-debugger@v1
 
       # 2. Configure AWS authentication through GitHub OIDC
       - name: Configure AWS credentials

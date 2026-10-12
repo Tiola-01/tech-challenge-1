@@ -1,0 +1,10 @@
+resource "aws_ecr_repository" "app" {
+  name                 = "tech-challenge-1"
+  image_tag_mutability = "IMMUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  force_delete = true
+}
